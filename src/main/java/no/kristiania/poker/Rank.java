@@ -1,6 +1,6 @@
 package no.kristiania.poker;
 
-public enum Rank {
+public enum Rank implements Comparable<Rank> {
     NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_8, NUMBER_10, KING;
 
     public String getName() {

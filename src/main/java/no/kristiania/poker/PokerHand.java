@@ -11,8 +11,9 @@ public class PokerHand {
     }
 
     public String getScore() {
-        Rank maxRank = Stream.of(cards).map(card -> card.getRank())
-                .max(Comparator.comparingInt(Enum::ordinal))
+        Rank maxRank = Stream.of(cards)
+                .map(Card::getRank)
+                .max(Comparator.naturalOrder())
                 .orElseThrow();
         return "high card " + maxRank.getName();
     }
