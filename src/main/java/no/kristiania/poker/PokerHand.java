@@ -1,6 +1,10 @@
 package no.kristiania.poker;
 
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
 
 public class PokerHand {
@@ -11,6 +15,21 @@ public class PokerHand {
     }
 
     public String getScore() {
+        Map<Rank, List<Card>> rankFrequency = new HashMap<>();
+        for (Card card : cards) {
+            if (!rankFrequency.containsKey(card.getRank())) {
+                rankFrequency.put(card.getRank(), new ArrayList<>());
+            }
+            rankFrequency.get(card.getRank()).add(card);
+        }
+
+        for (Rank rank : rankFrequency.keySet()) {
+            if (rankFrequency.get(rank).size() == 2) {
+                return "pair of 2";
+            }
+        }
+
+
         Rank maxRank = Stream.of(cards)
                 .map(Card::getRank)
                 .max(Comparator.naturalOrder())
