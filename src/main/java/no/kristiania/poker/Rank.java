@@ -1,5 +1,16 @@
 package no.kristiania.poker;
 
 public enum Rank {
-    NUMBER_3, NUMBER_4, NUMBER_8, KING, NUMBER_10, NUMBER_2
+    NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_8, NUMBER_10, KING;
+
+    public String getName() {
+        return switch (this) {
+            case NUMBER_2 -> "2";
+            case NUMBER_3 -> "2";
+            case NUMBER_4 -> "2";
+            case NUMBER_8 -> "2";
+            case NUMBER_10 -> "10";
+            case KING -> "King";
+        };
+    }
 }
