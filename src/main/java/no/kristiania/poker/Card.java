@@ -1,7 +1,13 @@
 package no.kristiania.poker;
 
 public class Card {
-    public Card(Suit suit, Rank rank) {
+    private Rank rank;
 
+    public Card(Suit suit, Rank rank) {
+        this.rank = rank;
+    }
+
+    public Rank getRank() {
+        return rank;
     }
 }
