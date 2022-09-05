@@ -1,7 +1,7 @@
 package no.kristiania.poker;
 
 public enum Rank implements Comparable<Rank> {
-    NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_8, NUMBER_10, KING;
+    NUMBER_2, NUMBER_3, NUMBER_4, NUMBER_8, NUMBER_10, KING, ACE;
 
     public String getName() {
         return switch (this) {
@@ -11,6 +11,7 @@ public enum Rank implements Comparable<Rank> {
             case NUMBER_8 -> "8";
             case NUMBER_10 -> "10";
             case KING -> "King";
+            case ACE -> "Ace";
         };
     }
 }
