@@ -6,9 +6,9 @@ public enum Rank {
     public String getName() {
         return switch (this) {
             case NUMBER_2 -> "2";
-            case NUMBER_3 -> "2";
-            case NUMBER_4 -> "2";
-            case NUMBER_8 -> "2";
+            case NUMBER_3 -> "3";
+            case NUMBER_4 -> "4";
+            case NUMBER_8 -> "8";
             case NUMBER_10 -> "10";
             case KING -> "King";
         };
