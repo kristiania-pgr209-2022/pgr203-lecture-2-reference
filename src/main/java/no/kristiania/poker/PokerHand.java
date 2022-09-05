@@ -25,7 +25,7 @@ public class PokerHand {
 
         for (Rank rank : rankFrequency.keySet()) {
             if (rankFrequency.get(rank).size() == 2) {
-                return "pair of 2";
+                return "pair of " + rank.getName();
             }
         }
 
